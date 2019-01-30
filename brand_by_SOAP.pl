@@ -9,7 +9,7 @@ use feature qw(say);
 # ------
 # This file take Druglist from file and get Brand Name of that list
 # Input  : ~/Desktop/druglist.txt
-# Output : ~/Desktop/SOAP_time_Brand.txt
+# Output : ~/Desktop/SOAP_date_Brand.txt
 # ------
 
 use feature qw(say);
