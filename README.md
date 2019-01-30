@@ -1,7 +1,7 @@
 
 ## Method 1: SOAP
 
-**Message**  : ChEBI provide webServices. But seems like only can retrive compelete data via ChEB ID. So I get ChEB ID first then get complete data.
+**Message**  : ChEBI provide webServices. Get ChEB ID first then get complete data.
 \
 **Reference**: https://www.ebi.ac.uk/chebi/webServices.do 
 
