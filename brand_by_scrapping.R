@@ -51,9 +51,12 @@ files     <- paste0(temp_dir,"/",list.files(temp_dir))
 drug.bank <- read.csv(files)
 unlink(c(temp_file,temp_dir))
 
-date <- format(Sys.time(), "%b_%d_%Y_")                
-outfile <- paste("~/Desktop/", "Scraping_" , date , "_Brand.txt") # output filename 
-
+date <- format(Sys.time(), "%b_%d_%Y")    
+outfile <- paste0("~/GetBrandNames/", "Scraping_" , date , "_Brand.txt") # output filename 
+if (file.exists(outfile)){
+  file.remove(outfile)
+}
+write(paste0("drug",",","brand"), file = outfile, append = T)
 # Scrapping
 for (drug in drug.list) {
   # is drug exits in brugbank
@@ -65,16 +68,15 @@ for (drug in drug.list) {
             html_nodes("p.drug-subtitle") %>%
             html_text() %>%
             strsplit("Brand Name: ")
-    )[[1]][-1] %>%
-      gsub(pattern = ",", replacement = "\t")
+    )[[1]][-1]
     # write output
-    out <- paste(drug,brand_name,sep = "\t")
+    out <- paste(drug,brand_name,sep = ",")
     write(out, file = outfile, append = T)
     
   }else{
     # print message about missing drugs
     print(paste("Can't find DrugBank ID for", drug, sep = " "))
-    out <- paste(drug,"",sep = "\t")
+    out <- paste(drug,"",sep = ",")
     write(out, file = outfile, append = T)
   }
 }

@@ -1,0 +1,6 @@
+"brand_name","chebi_accession","drug_compounds_name"
+"Emtexate","CHEBI:44185","methotrexate"
+"Ledertrexate","CHEBI:44185","methotrexate"
+"Rheumatrex","CHEBI:44185","methotrexate"
+"Trexall","CHEBI:44185","methotrexate"
+"Arava","CHEBI:6402","leflunomide"

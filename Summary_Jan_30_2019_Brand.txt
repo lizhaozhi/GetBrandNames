@@ -1,0 +1,14 @@
+drug,brand_summary
+methotrexate,
+methotrexate,Emtexate
+methotrexate,Ledertrexate
+methotrexate,Rheumatrex
+methotrexate,Trexall
+leflunomide,Arava
+etanercept,Enbrel SureClick
+abatacept,Orencia
+infliximab,Remicade
+cimzia,
+golimumab,Simponi
+ simponi smartject, Simponi Aria
+rituximab,Rituxan

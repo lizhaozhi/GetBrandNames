@@ -4,7 +4,7 @@ use warnings;
 use feature qw(say);
 
 # ------
-# File   : getBrandByName.pl 
+# File   : brand_by_SOAP.pl 
 # History: 25-Jan-2019 Zhaozhi created the File
 # ------
 # This file take Druglist from file and get Brand Name of that list
@@ -17,11 +17,11 @@ use SOAP::Lite + trace => qw(debug);
 use Data::Dumper;
 
 my ($weekDay, $month, $mday, $time, $year) = split(" ",localtime());
-my $outfile   = ">/Users/zhaozhili/Desktop/SOAP_$month\_$mday\_$year\_Brand";
+my $outfile   = ">/Users/zhaozhili/Desktop/SOAP_$month\_$mday\_$year\_Brand.txt";
 my $infile    = "/Users/zhaozhili/Desktop/druglist.txt";
 open(my $InFh, $infile) or die $!;
 open(my $OutFh, $outfile) or die $!;
-say $OutFh join("\t", "drug", "brand_name");                          # Print colname
+say $OutFh join(",", "drug", "brand_name");                          # Print colname
 
 # Setup service
 my $WSDL      = "https://www.ebi.ac.uk/webservices/chebi/2.0/webservice?wsdl";
@@ -55,7 +55,7 @@ while (my $drug = <@drugs>){
     @results = $entity->valueof('//Synonyms');
     foreach my $result (@results){
         if($result->{'type'} eq 'BRAND NAME'){
-        say $OutFh join("\t", $drug, $result->{'data'});
+        say $OutFh join(",", $drug, $result->{'data'});
         }
     }
 }

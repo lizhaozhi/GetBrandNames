@@ -136,7 +136,7 @@ for (i in 1:length(drug_list)) {
   }
 }
 result  <- dbGetQuery(con, query)                     # Retrive result
-write.table(result, file = outfile, row.names=FALSE)
+write.table(result, file = outfile, row.names=FALSE, sep = ",")
 dbDisconnect(con)
 
 
