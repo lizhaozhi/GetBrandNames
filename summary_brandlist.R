@@ -55,7 +55,6 @@ for (list in lists){
     }
   }
 }
-
 date <- format(Sys.time(), "%b_%d_%Y")    
 outfile <- paste0("~/Desktop/", "Summary_" , date , "_Brand.txt")     # output filename 
 if (file.exists(outfile)){

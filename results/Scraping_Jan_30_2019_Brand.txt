@@ -1,0 +1,11 @@
+drug,brand
+Leflunomide,Arava
+Etanercept,Enbrel SureClick
+Abatacept,Orencia
+Infliximab,Remicade
+Cimzia,
+Golimumab,Simponi
+Golimumab,Simponi SmartJect
+Golimumab,Simponi Aria
+Rituximab,Rituxan
+Abatacept,Orencia

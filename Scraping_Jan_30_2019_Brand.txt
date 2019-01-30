@@ -1,6 +1,0 @@
-drug,brand
-Methotrexate,
-Leflunomide,Arava
-Etanercept,Enbrel SureClick
-Abatacept,Orencia
-Infliximab,Remicade

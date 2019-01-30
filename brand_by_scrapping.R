@@ -64,15 +64,19 @@ for (drug in drug.list) {
     # get drug.com url
     url <- as.character(drug.bank[drug.bank$Name == drug,"Drugs.com.Link"])
     # get brand names
-    brand_name <- (read_html(url) %>%
+    brands <- (read_html(url) %>%
             html_nodes("p.drug-subtitle") %>%
             html_text() %>%
             strsplit("Brand Name: ")
-    )[[1]][-1]
-    # write output
-    out <- paste(drug,brand_name,sep = ",")
-    write(out, file = outfile, append = T)
-    
+    )[[1]][-1] %>%
+      strsplit(",")
+    for (brand in brands){
+      # write output
+      brand <- sub("^\\s+", "", brand)
+      out <- paste(drug, brand,sep = ",")
+      write(out, file = outfile, append = T)           
+    }
+
   }else{
     # print message about missing drugs
     print(paste("Can't find DrugBank ID for", drug, sep = " "))
@@ -80,6 +84,4 @@ for (drug in drug.list) {
     write(out, file = outfile, append = T)
   }
 }
-
-
 

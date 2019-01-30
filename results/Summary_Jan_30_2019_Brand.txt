@@ -1,5 +1,4 @@
 drug,brand_summary
-methotrexate,
 methotrexate,Emtexate
 methotrexate,Ledertrexate
 methotrexate,Rheumatrex
@@ -10,5 +9,6 @@ abatacept,Orencia
 infliximab,Remicade
 cimzia,UCB
 golimumab,Simponi
- simponi smartject, Simponi Aria
+golimumab,Simponi SmartJect
+golimumab,Simponi Aria
 rituximab,Rituxan
