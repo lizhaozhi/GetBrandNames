@@ -1,9 +1,9 @@
-------
-Method 1: SOAP
-Message  : ChEBI provide webServices. But seems like only can retrive compelete data via ChEB ID. So I get ChEB ID first then get complete data.
+
+##Method 1: SOAP
+**Message** ChEBI provide webServices. But seems like only can retrive compelete data via ChEB ID. So I get ChEB ID first then get complete data.
 Reference: https://www.ebi.ac.uk/chebi/webServices.do 
-------
-Method 2: MySQL
+
+##Method 2: MySQL
 Message  : build MySQL database and get data
 Reference: https://www.ebi.ac.uk/chebi/init.do
 ------
