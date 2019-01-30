@@ -15,7 +15,7 @@
 # Step 1: get druglist
 #         Line 38 to change druglist file name
 # Step 2: get drugbank external links
-#         Line 42~ to change drugbank username and password
+#         Line 44 and 45 to change drugbank username and password
 # Step 3: scrapping and get brand name
 # Step 4: write result to outfile
 #         Line 55 to change output file name
@@ -41,8 +41,8 @@ temp_dir   <- tempfile()
 temp_file  <- tempfile()                                          # create temp file and dir to load data
 download_db_link <- paste0(
   "curl -Lfv -o ", temp_file,                                     # filename
-  " -u ", "li.zhaoz@husky.neu.edu",                               # drugbank username
-  ":", "yw8570lucky",                                             # password
+  " -u ", "username",                                             # drugbank username
+  ":", "password",                                                # password
   " ","https://www.drugbank.ca/releases/5-1-2/downloads/all-drug-links"
 )
 system(download_db_link)

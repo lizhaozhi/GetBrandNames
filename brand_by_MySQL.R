@@ -46,7 +46,7 @@ con <- dbConnect(
   MySQL(),
   dbname   = '', 
   user     = 'root',
-  password = 'yw8570lucky'                               #......This is my password....
+  password = 'password'                                 # database password
   )
 # create a database to store data
 dbname  <- "ChEBI" 
