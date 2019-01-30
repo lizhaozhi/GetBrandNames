@@ -8,7 +8,7 @@ leflunomide,Arava
 etanercept,Enbrel SureClick
 abatacept,Orencia
 infliximab,Remicade
-cimzia,Certolizumab pegol
+cimzia,UCB
 golimumab,Simponi
  simponi smartject, Simponi Aria
 rituximab,Rituxan
